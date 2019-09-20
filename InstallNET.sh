@@ -249,7 +249,7 @@ fi
 
 if [[ -z "$tmpDIST" ]]; then
   [ "$Relese" == 'Debian' ] && tmpDIST='jessie' && DIST='jessie';
-  [ "$Relese" == 'Ubuntu' ] && tmpDIST='bionic' && DIST='bionic';
+  [ "$Relese" == 'Ubuntu' ] && tmpDIST='disco' && DIST='disco';
   [ "$Relese" == 'CentOS' ] && tmpDIST='6.10' && DIST='6.10';
 fi
 
@@ -276,7 +276,7 @@ if [[ -z "$DIST" ]]; then
     [[ $? -eq '0' ]] && {
       isDigital="$(echo "$DIST" |grep -o '[\.0-9]\{1,\}' |sed -n '1h;1!H;$g;s/\n//g;$p')";
       [[ -n $isDigital ]] && {
-        [[ "$isDigital" == '12.04' ]] && DIST='precise';
+        [[ "$isDigital" == '19.04' ]] && DIST='disco';
         [[ "$isDigital" == '14.04' ]] && DIST='trusty';
         [[ "$isDigital" == '16.04' ]] && DIST='xenial';
         [[ "$isDigital" == '18.04' ]] && DIST='bionic';
@@ -800,7 +800,7 @@ text
 unsupported_hardware
 vnc
 skipx
-timezone --isUtc Asia/Hong_Kong
+timezone --isUtc Asia/Shanghai
 #ONDHCP network --bootproto=dhcp --onboot=on
 #NODHCP network --bootproto=static --ip=$IPv4 --netmask=$MASK --gateway=$GATE --nameserver=8.8.8.8 --onboot=on
 bootloader --location=mbr --append="rhgb quiet crashkernel=auto"
