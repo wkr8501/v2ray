@@ -100,7 +100,6 @@
 				"inboundTag": ["tg-in"],
 				"outboundTag": "tg-out"
 			}
-			//include_ban_xx
 			//include_ban_bt
 			//include_ban_ad
 			//include_rules
